@@ -1,0 +1,270 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+}
+
+.topo {
+    height: 40%;
+    display: flex;
+    justify-content: center; 
+    background-color: #4587df; 
+    text-align: center;
+}
+
+.topo h1 {
+    margin-left: 20px; 
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 4%;
+}
+
+.conteudo {
+    flex-grow: 0.8; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.login {
+    background-color: white; 
+    padding: 39px; 
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: -15%;
+}
+
+input, .button {
+    border: 1px solid #ccc; 
+    padding: 10px;
+    margin-bottom: 10px;  
+    border-radius: 5px; 
+    width: 100%;
+    max-width: 300px;
+    height: 135%;
+}
+
+.button {
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input:focus {
+    outline: none; 
+    border-color: #007bff; 
+}
+
+a{
+   text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 90;
+    align-items: center;
+    flex-grow: 0.3;
+}
+
+.nav {
+    height: 20%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center; 
+    background-color: #4587df; 
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    background-color: #0056b3;
+    padding: 10px;
+    border-radius: 30px;
+}
+nav a:hover{
+    background-color: aqua;
+    color: black;
+}
+.delete {
+    background-color: white;
+}
+
+
+/* página de comentários: */
+.form_comentarios {
+    border: 1px solid #0056b3 ;
+    color: black;
+    padding: 39px; 
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0056b3; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 246px;
+    min-height: 300px;
+    margin: 20px auto;
+}
+
+.form_comentarios h2 {
+    text-align: center;
+}
+
+.form_comentarios .select_livros {
+    text-align: justify;
+    width: 100%;
+    appearance: none;
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+
+.form_comentarios .label_mensagem {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.form_comentarios .input_mensagem {
+    display: flex;
+    color: white;
+    height: 35px;
+    max-width: 225px;
+}
+.form_comentarios .botao_enviar {
+    margin-top: 10px;
+    display: flex;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    height: 35px;
+    max-width: 250px;
+}
+
+/* página de logout: */
+.form_logout {
+    border: 1px solid #0056b3 ;
+    color: black;
+    padding: 39px; 
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0056b3; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 246px;
+    min-height: 300px;
+    margin: 20px auto;
+}
+
+.form_logout h1 {
+    text-align: center;
+}
+
+.form_logout .sim_sair, .nao_sair {
+    margin-top: 10px;
+    display: flex;
+    background-color: #007bff;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: white;
+    height: 35px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+#saudacao {
+    flex-direction: column;
+}
+
+.ola {
+    color: #0056b3;
+}
+#oi {
+    width: 50%;
+}
+
+.livros {
+    list-style: none;
+}
+
+#livro:hover {
+    color:#007bff;
+}
+
+#delete {
+    margin-top: 10px;
+    display: flex;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    height: 35px;
+    max-width: 250px;
+}
+
+#adicionar{
+    border: 1px solid #0056b3 ;
+    color: black;
+    padding: 39px; 
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0056b3; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 246px;
+    min-height: 300px;
+    margin: 20px auto;
+}
+
+
+#adicionar  h2 {
+    text-align: center;
+}
+
+
+#adicionar .label_mensagem {
+    margin-top: 10px;
+    width: 100%;
+}
+
+#adicionar .input_mensagem {
+    display: flex;
+    color: white;
+    height: 35px;
+    max-width: 225px;
+}
+#adicionar .botao_enviar {
+    margin-top: 10px;
+    display: flex;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    height: 35px;
+    max-width: 250px;
+}
+
+
+#liv {
+    margin-left: 10px;
+    text-shadow: 0 0 10px #0056b3;
+}

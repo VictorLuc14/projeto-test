@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Meus LIvros
+{% endblock %}
+
+{% block conteudo %}
+    <h1 id="liv">Aqui estão seus livros:</h1>
+    <ul>
+        {%for livro in livros%}
+        <li class="livros">
+            <p id="livro">Nome: {{livro['liv_titulo']}} |  Gênero: {{livro['liv_genero']}} | Autor: {{livro['liv_autor']}}</p>
+            <form action="{{url_for('remove_livro', id=livro['liv_id'])}}" method="POST" class="delete">
+                <input type="submit" value="deletar" id="delete">
+            </form>
+        </li>
+        {%endfor%}
+    </ul>
+
+    
+
+    <form action="{{url_for('livros')}}" method="POST" id="adicionar">
+        <h2>Adicionar livro</h2>
+
+        <label for="add_nome_livro"class="label_mensagem">Título do livro:</label>
+        <input type="text" name="titulo" id="add_nome_livro" placeholder="Título do livro" required class="input_mensagem">
+
+        <label for="genero_livro"class="label_mensagem">Gênero do livro:</label>
+        <input type="text" name="genero" id="genero_livro" placeholder="Gênero do livro" required class="input_mensagem">
+
+        <label for="autor_livro"class="label_mensagem">Autor do livro:</label>
+        <input type="text" name="autor" id="genero_livro" placeholder="Autor do livro" required class="input_mensagem">
+
+
+        <input type="submit" value="Adicionar" class="botao_enviar">
+    </form>
+
+{% endblock %}

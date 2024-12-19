@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Comentarios
+{% endblock %}
+
+{% block conteudo %}
+
+
+
+
+<form action="{{url_for('comentarios')}}" method="POST" class="form_comentarios">
+    <h2>Anotar Comentário sobre livro</h2>
+
+    <label for="livro" class="label_mensagem">Livro:</label>
+    <select name="livro" id="" class="select_livros">
+        {% for livro in livros %}
+            <option value="{{livro['liv_titulo']}}">{{livro['liv_titulo']}}</option>
+        {% endfor %}
+    </select>
+    <label for="conteudo" class="label_mensagem">Mensagem:</label>
+    <input type="text" placeholder="Insira a mensagem" name = "conteudo" class="input_mensagem">
+    <input type="submit" value="Enviar" class="botao_enviar">
+</form>
+{% endblock %}

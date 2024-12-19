@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Login{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="conteiner">
+        <div class="topo">
+            <h1>Bem - Vindo a Biblioteca Virtual !</h1>
+        </div>
+        <div class="conteudo">
+            {% block content %}
+            <form action="{{url_for('login')}}" method="POST" class="login">
+                <h3>Login</h3>
+                <div class="email"> 
+                    <label>Email:</label>
+                    <input type="email" required name="email">
+                </div>
+                <div class="senha">    
+                    <label>Senha:</label>
+                    <input type="password" required name="senha" class="senha">
+                </div>
+                <div class="opcao"><p>Não possui conta ? <a href="{{url_for('cadastro')}}">Cadastre-se</a></p></div>
+                <input type="submit" value="enviar" class="button"> 
+            </form>
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
